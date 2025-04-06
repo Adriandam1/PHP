@@ -1,5 +1,7 @@
 <?php
 
+// Con este archivo creamos la base de datos y la tabla productos manualmente
+
 // http://localhost/phpmyadmin usuario: accesodatos password: admin
 
 
