@@ -9,7 +9,7 @@ $password = "admin";
 $conexion = mysqli_connect($servidor, $usuario, $password) or die("Error de conexion: " . mysqli_error($conexion));
 
 // Crear base de datos productosbd
-$sql1 ="CREATE DATABASE productosbd";
+$sql1 = "CREATE DATABASE IF NOT EXISTS productosbd";
 // Conectamos a la base de datos productosbd
 mysqli_query($conexion, $sql1) or die("Error al crear la base de datos: ");
 
@@ -18,7 +18,7 @@ mysqli_select_db($conexion, "productosbd") or die("Error al seleccionar la base 
 
 // Crear tabla productos
 // La tabla productos tiene los siguientes campos:
-$sql2 = "CREATE TABLE productos (
+$sql2 = "CREATE TABLE IF NOT EXISTS productos (
     id INT(11) PRIMARY KEY,
     nombre VARCHAR(50),
     descripcion VARCHAR(255),
